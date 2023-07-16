@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Profile</title>
-  </head>
-  <body>
-    <form action="Profile.php" method="post">
-      <span style="text-align:center;">
-        <h1><i> Submit your info </i></h1>
-      </span>
-      <table style="align:center">
-        <tr>
-          <th>Name: </th>
-          <td><input type="text" id="txt.name" name="txt.name"></td>
-        </tr>
-        <tr>
-          <th>Date of birth: </th>
-          <td><input type="</td>
-        </tr>
-      </table>
-    </form>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Profile</title>
+</head>
+<body>
+<form action="Profile.php" method="post">
+  <h1 style="text-align:center"><i> Submit your infomation </i></h1>
+  <table align="center">
+    <tr>
+      <th><label for="Name">Name: </label></th>
+      <td><input type="text" id="Name" name="name"></td>
+    </tr>
+    <tr>
+      <th><label for="dob">Date of birth: </label></th>
+      <td><input type="date" id="dob" name="dob"></td>
+    </tr>
+    <tr>
+      <th><label for="email">Email: </label></th>
+      <td><input type="text" id="email" name="email"></td>
+    </tr>
+    <tr>
+      <th>Gender: </th>
+      <td>
+        <input type="radio" id="Male" name="gender" value="Male">
+        <label for="Male">Male </label>
+        <input type="radio" id="Female" name="gender" value="Female">
+        <label for="Female">Female </label>
+        <input type="radio" id="Other" name="gender" value="Other">
+        <label for="Other">Other </label>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="describe">Describe yourself: </label> </th>
+      <td><textarea rows="5" cols="40" id="describe" name="text"></textarea></td>
+    </tr>
+    <tr>
+      <th colspan="2"> <input type="submit"></th>
+    </tr>
+  </table>
+</form>
+</body>
 </html>
