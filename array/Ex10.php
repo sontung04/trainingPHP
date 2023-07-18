@@ -23,7 +23,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     for($i = 0 ; $i<count($arr) ; $i++){
         $string .= $arr[$i];
     }
-    $arr = str_split($string,1);
+    $string = strtolower($string);   // để không phân biệt chữ cái hoa và thường
+    $arr = str_split($string,1); //tách mỗi 1 ký tự thành 1 phần tử của mảng
     $is_pal = true;
     for($i = 0 ; $i < count($arr) ; $i++){
         if($arr[$i] != $arr[count($arr) - $i - 1]){
