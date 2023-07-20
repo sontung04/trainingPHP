@@ -72,5 +72,5 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     } else {
         echo "This equation has two solutions: x1 = " . $parameter->getRoot1() . " and x2 = " . $parameter->getRoot2();
     }
-}
+} //
 ?>
