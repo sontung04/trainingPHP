@@ -4,15 +4,15 @@ class Rectangle extends Shape {
     public $width;
     public $length;
     public function __construct($name , $width , $length) {
-        $this->name = $name;
+        parent::__construct($name);
         $this->length = $length;
         $this->width = $width;
     }
     public function calculateArea() {
-        echo "Area of this rectangle is " . $this->length * $this->width . '<br>';
+        return  $this->length * $this->width;
     }
     public function calculatePerimeter() {
-        echo "Perimeter of this rectangle is " . ($this->length + $this->width) * 2 . '<br>';
+        return ($this->length + $this->width) * 2;
     }
 }
 ?>

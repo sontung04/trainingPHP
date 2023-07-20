@@ -2,16 +2,15 @@
 include_once "Circle.php";
 class Cylinder extends Circle {
     public $height;
-    public function __construct($name , $height , $radius) {
-        $this->name = $name;
+    public function __construct($name , $radius , $height) {
+        parent::__construct($name , $radius);
         $this->height = $height;
-        $this->radius = $radius;
     }
     public function calculateArea() {
-        echo "Area of this cylinder is " . ( 2 * pi() * $this->radius * ( $this->height +  $this->radius ) ). '<br>'; // 2πrh + 2πr^2
+        return 2 * pi() * $this->radius * ( $this->height +  $this->radius ); // 2πrh + 2πr^2
     }
     public function calculateVolume() {
-        echo "Volume of this cylinder is " . ( pi() * $this->radius ** 2 *$this->height ) . '<br>'; // πr^2*h
+        return pi() * $this->radius ** 2 * $this->height; // πr^2*h
     }
 }
 ?>
