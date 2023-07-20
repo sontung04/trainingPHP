@@ -35,14 +35,14 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $this->c = $c;
         }
         public function delta() {
-            return $this->b ** 2 - 4 * $this->a * $this->c; //b^2-4ac
+            return $this->b ** 2 - 4 * $this->a * $this->c;
         }
         public function getRoot1() {
             if($this->delta()>=0){
-                return (- $this->b + sqrt( $this->delta() )) / (2 * $this->a); //(-b+sqrt(delta)/2a)
+                return (- $this->b + sqrt( $this->delta() )) / (2 * $this->a);
             } else {
-                return - $this->b / (2 * $this->a) .                        // phần thưc: -b/2a
-                    ' + ' . sqrt( - $this->delta() ) / (2 * $this->a) . 'i'; // phần ảo: i*sqrt(-delta)/2a
+                return - $this->b / (2 * $this->a) .                        // phần thưc
+                    ' + ' . sqrt( - $this->delta() ) / (2 * $this->a) . 'i'; // phần ảo
             }
         }
         public function getRoot2() {

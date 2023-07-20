@@ -1,0 +1,33 @@
+<?php
+include_once "Rectangular.php";
+include_once "Cylinder.php";
+include_once "Circle.php";
+include_once "Rectangle.php";
+$radius = 10;
+$height = 20;
+$width = 30;
+$length = 40;
+$circle = new Circle("circle" , $radius);
+$cylinder = new Cylinder("cylinder" , $height , $radius);
+$rectangle = new Rectangle("rectangle" ,$length , $width);
+$rectangular = new Rectanglular("rectangular" , $length , $width , $height);
+$circle->showName();
+$circle->calculateArea();
+$circle->calculatePerimeter();
+echo '<br>';
+$cylinder->showName();
+$cylinder->calculateArea();
+echo " (wrong)";
+$cylinder->calculatePerimeter();
+$cylinder->calculateVolume();
+echo '<br>';
+$rectangle->showName();
+$rectangle->calculateArea();
+$rectangle->calculatePerimeter();
+echo '<br>';
+$rectangular->showName();
+$rectangular->calculateArea();
+echo " (wrong)";
+$rectangular->calculatePerimeter();
+$rectangular->calculateVolume();
+?>
